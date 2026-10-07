@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <base href="/okontse/" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no" />
+  <title>Оконце</title>
+  <meta name="description" content="Оконце — узнайте народный промысел по фото узора. Энциклопедия промыслов, места и маршруты, сундучок находок." />
+  <meta name="theme-color" content="#9B2D26" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Оконце" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <style id="expo-reset">
+    html, body { height: 100%; margin: 0; }
+    body { overflow: hidden; background: #7A201B; -webkit-tap-highlight-color: transparent; overscroll-behavior: none; }
+    #root { display: flex; height: 100%; flex: 1; }
+    /* ноутбук: приложение в «окне», по краям — красный узор */
+    @media (min-width: 700px) {
+      body {
+        background-color: #7A201B;
+        background-image: radial-gradient(ellipse at center, rgba(155,45,38,.0) 0, rgba(60,14,12,.55) 100%), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23E3C68C%22%20stroke-opacity%3D%22.28%22%20stroke-width%3D%221.4%22%3E%3Cpath%20d%3D%22M32%2014%20L44%2032%20L32%2050%20L20%2032%20Z%22/%3E%3Cpath%20d%3D%22M32%2022%20L38%2032%20L32%2042%20L26%2032%20Z%22/%3E%3C/g%3E%3Cg%20fill%3D%22%23F3EBDD%22%20fill-opacity%3D%22.22%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%222.2%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%223%22/%3E%3Ccircle%20cx%3D%2264%22%20cy%3D%220%22%20r%3D%223%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2264%22%20r%3D%223%22/%3E%3Ccircle%20cx%3D%2264%22%20cy%3D%2264%22%20r%3D%223%22/%3E%3C/g%3E%3C/svg%3E");
+        background-size: auto, 64px 64px;
+      }
+      #root { max-width: 480px; margin: 0 auto; box-shadow: 0 0 0 1px rgba(227,198,140,.35), 0 30px 80px rgba(0,0,0,.45); overflow: hidden; }
+    }
+    @media (min-width: 700px) and (min-height: 760px) {
+      #root { height: calc(100% - 48px); margin-top: 24px; border-radius: 28px; }
+    }
+    #boot { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: -1; }
+    #boot img { width: 120px; height: 120px; border-radius: 28px; }
+  </style>
+<meta name="theme-color" content="#9B2D26">
+<meta name="description" content="Узнайте народный промысел по фото узора">
+<link rel="icon" href="/okontse/favicon.ico"/><link rel="preload" href="/okontse/_expo/static/css/native-tabs.module-78b0f59737571f455720970791a36bdd.css" as="style">
+<link rel="stylesheet" href="/okontse/_expo/static/css/native-tabs.module-78b0f59737571f455720970791a36bdd.css"></head>
+<body>
+  <noscript>Чтобы открыть «Оконце», включите JavaScript.</noscript>
+  <div id="boot"><img src="icons/icon-192.png" alt="" /></div>
+  <div id="root"></div>
+  <script>
+    if ('serviceWorker' in navigator && location.protocol === 'https:') {
+      window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
+    }
+  </script>
+<script src="/okontse/_expo/static/js/web/entry-cb80c97b344274bc5bde4a8ce6d120fc.js" defer></script>
+</body>
+</html>

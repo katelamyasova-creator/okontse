@@ -9,7 +9,7 @@ self.addEventListener('fetch', (e) => {
   const req = e.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  if (url.pathname.includes('/model/')) return;
+  if (/\/(vision-|brain-|model\.json)/.test(url.pathname)) return;
   if (req.mode === 'navigate') {
     e.respondWith(fetch(req).then((r) => { const c = r.clone(); caches.open(SHELL).then((s) => s.put('index', c)); return r; })
       .catch(() => caches.open(SHELL).then((s) => s.match('index'))));
